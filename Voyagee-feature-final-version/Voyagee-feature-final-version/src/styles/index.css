@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900;
+  }
+}
+
+.hero-carousel .slick-list {
+  overflow: hidden;
+}
+.hero-carousel .slick-slide {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.hero-carousel .slick-slide.slick-active {
+  opacity: 1;
+}
+
+.hero-carousel .slick-slider {
+  width: 100%;
+}
+
+.hero-carousel .slick-slide > div {
+  width: 100%;
+}
+
+.hero-carousel .slick-dots {
+  bottom: -40px;
+}
+
+.hero-carousel .slick-dots li {
+  margin: 0 6px;
+}
+
+.hero-carousel .slick-dots li button:before {
+  display: none;
+}
+
+.hero-carousel .slick-prev,
+.hero-carousel .slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.hero-carousel .slick-prev {
+  left: -50px;
+}
+
+.hero-carousel .slick-next {
+  right: -50px;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+  background: rgb(209 213 219);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(59 130 246);
+	border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(29 78 216);
+}
